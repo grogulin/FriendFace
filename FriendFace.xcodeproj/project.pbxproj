@@ -11,6 +11,10 @@
 		A4EC4AF429927979006F59E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC4AF329927979006F59E9 /* ContentView.swift */; };
 		A4EC4AF62992797B006F59E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EC4AF52992797B006F59E9 /* Assets.xcassets */; };
 		A4EC4AF92992797B006F59E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EC4AF82992797B006F59E9 /* Preview Assets.xcassets */; };
+		A4EC4B002992799D006F59E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC4AFF2992799D006F59E9 /* User.swift */; };
+		A4EC4B0229927B49006F59E9 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC4B0129927B49006F59E9 /* Friend.swift */; };
+		A4EC4B0429928C22006F59E9 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC4B0329928C22006F59E9 /* UserView.swift */; };
+		A4EC4B0629929568006F59E9 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC4B0529929568006F59E9 /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		A4EC4AF329927979006F59E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4EC4AF52992797B006F59E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4EC4AF82992797B006F59E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4EC4AFF2992799D006F59E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A4EC4B0129927B49006F59E9 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		A4EC4B0329928C22006F59E9 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		A4EC4B0529929568006F59E9 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,12 @@
 			isa = PBXGroup;
 			children = (
 				A4EC4AF129927979006F59E9 /* FriendFaceApp.swift */,
+				A4EC4B0529929568006F59E9 /* UserDetailView.swift */,
 				A4EC4AF329927979006F59E9 /* ContentView.swift */,
+				A4EC4B0329928C22006F59E9 /* UserView.swift */,
 				A4EC4AF52992797B006F59E9 /* Assets.xcassets */,
+				A4EC4B0129927B49006F59E9 /* Friend.swift */,
+				A4EC4AFF2992799D006F59E9 /* User.swift */,
 				A4EC4AF72992797B006F59E9 /* Preview Content */,
 			);
 			path = FriendFace;
@@ -139,6 +151,10 @@
 			files = (
 				A4EC4AF429927979006F59E9 /* ContentView.swift in Sources */,
 				A4EC4AF229927979006F59E9 /* FriendFaceApp.swift in Sources */,
+				A4EC4B0429928C22006F59E9 /* UserView.swift in Sources */,
+				A4EC4B002992799D006F59E9 /* User.swift in Sources */,
+				A4EC4B0629929568006F59E9 /* UserDetailView.swift in Sources */,
+				A4EC4B0229927B49006F59E9 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
