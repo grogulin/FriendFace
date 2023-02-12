@@ -36,7 +36,8 @@ struct TagsView: View {
 }
 
 struct FriendView: View {
-    let friends: [Friend]
+//    let friends: [Friend]
+    let friends: [CachedFriend]
     
     var body: some View {
         VStack {
@@ -60,7 +61,7 @@ struct FriendView: View {
                             }
                             
                             VStack {
-                                Text(friend.name)
+                                Text(friend.wrappedName)
                                     .fontWeight(.bold)
                                     .foregroundColor(.secondary)
                                 Spacer()
@@ -76,7 +77,8 @@ struct FriendView: View {
 }
 
 struct UserImage: View {
-    let user: User
+//    let user: User
+    let user: CachedUser
     var body: some View {
         ZStack {
             AsyncImage(url: URL(string: "https://xsgames.co/randomusers/avatar.php?g=pixel")) { image in
@@ -117,15 +119,16 @@ struct SectionHeader: View {
 }
 
 struct UserInfo: View {
-    let user: User
+//    let user: User
+    let user: CachedUser
     
     var body: some View {
         SectionHeader(title: "Info:")
         
-        showDetail(image: "person.fill", text: "\(user.age) years old")
-        showDetail(image: "case.fill", text: "Works in \(user.company)")
-        showDetail(image: "at", text: user.email)
-        showDetail(image: "clock.fill", text: "On FriendFace since \(user.registeredYear)")
+        showDetail(image: "person.fill", text: "\(user.wrappedAge) years old")
+        showDetail(image: "case.fill", text: "Works in \(user.wrappedCompany)")
+        showDetail(image: "at", text: user.wrappedEmail)
+        showDetail(image: "clock.fill", text: "On FriendFace since \(user.wrappedRegistered)")
     }
     
     func showDetail(image: String, text: String) -> some View {
@@ -143,9 +146,8 @@ struct UserInfo: View {
 
 
 struct UserDetailView: View {
-    let user: User
-
-    
+//    let user: User
+    let user: CachedUser
     
     var body: some View {
         ScrollView {
@@ -153,13 +155,14 @@ struct UserDetailView: View {
                 UserImage(user: user)
                 
                 Group {
-                    Text(user.name)
+                    Text(user.wrappedName)
                         .fontWeight(.bold)
                         .font(.largeTitle)
                     
-                    Text(user.address)
+                    Text(user.wrappedAddress)
                     
-                    TagsView(tags: user.tags)
+//                    TagsView(tags: user.tags)
+                    TagsView(tags: user.wrappedTags.components(separatedBy: ","))
                     
                     FriendView(friends: user.friends)
                     
@@ -167,7 +170,7 @@ struct UserDetailView: View {
         
                     SectionHeader(title: "About: ")
                     
-                    Text(user.about)
+                    Text(user.wrappedAbout)
                         .frame(maxWidth: .infinity, alignment: .leading)
     //                    .background(.red)
                         .padding([.top], 10)
@@ -185,8 +188,8 @@ struct UserDetailView: View {
     
 }
 
-struct UserDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserDetailView(user: user2)
-    }
-}
+//struct UserDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserDetailView(user: user2)
+//    }
+//}

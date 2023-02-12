@@ -15,7 +15,7 @@ struct Users: Codable {
     var results: [User]
 }
 
-struct User: Codable {
+struct User: Codable, Hashable {
     let id: String
     let isActive: Bool
     let name: String

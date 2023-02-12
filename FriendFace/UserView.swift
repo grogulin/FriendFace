@@ -12,7 +12,8 @@ let user = User(id: "50a48fa3-2c0f-4397-ac50-64da464f9954", isActive: true, name
 
 struct UserView: View {
     
-    let user: User
+//    let user: User
+    let user: CachedUser
     
     var body: some View {
         VStack {
@@ -38,7 +39,7 @@ struct UserView: View {
             }
             
             VStack {
-                Text(user.name)
+                Text(user.wrappedName)
                     .fontWeight(.bold)
                     .foregroundColor(.secondary)
                 Spacer()
@@ -48,9 +49,9 @@ struct UserView: View {
     }
 }
 
-struct UserView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserView(user: user)
-    }
-}
+//struct UserView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserView(user: user)
+//    }
+//}
 
